@@ -13,9 +13,6 @@ app.config['MYSQL_DB'] = 'booksDB'
 app.config['MYSQL_HOST']  ='localhost'
 mysql.init_app(app)
  
-
-books = [{'name': "Snow White", 'author' : "Grimm brothers"},
-        {'name : "Alice's Addventures in Wonderlan", 'author : "Lewis Carrol"}]
  
 
 @app.route("/", methods=['GET'])
