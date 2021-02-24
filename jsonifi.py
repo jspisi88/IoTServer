@@ -19,7 +19,7 @@ def  hello_world():
     return "hello world"
  
 
-@app.route("/api/db_name", methods=['GET'])
+@app.route("/api/Book", methods=['GET'])
 def return_all():
     conn = mysql.connect()
     cursor = conn.cursor()
