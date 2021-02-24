@@ -21,7 +21,7 @@ def  hello_world():
 
 @app.route("/api/Book", methods=['GET'])
 def return_all():
-    conn = mysql.connect()
+    conn = mysql.connect
     cursor = conn.cursor()
  
     cursor.execute("SELECT Name, Author FROM Book")
