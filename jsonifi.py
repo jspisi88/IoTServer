@@ -7,9 +7,9 @@ mysql = MySQL()
 app  = Flask(__name__)
  
 #MySQL configuration
-app.config['MYSQL_USER'] = 'booksuser'
-app.config['MYSQL_PASSWORD'] = 'booksuser123'
-app.config['MYSQL_DB'] = 'booksDB'
+app.config['MYSQL_USER'] = 'user1'
+app.config['MYSQL_PASSWORD'] = 'user123'
+app.config['MYSQL_DB'] = 'db_name'
 app.config['MYSQL_HOST']  ='localhost'
 mysql.init_app(app)
 
@@ -29,7 +29,6 @@ def return_all():
  
     return jsonify({'rows': rows})
 
- 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
     
