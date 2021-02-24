@@ -23,7 +23,7 @@ def  hello_world():
     return "hello world"
  
 
-@app.route("/api/books", methods=['GET'])
+@app.route("/api/db_name", methods=['GET'])
 def return_all():
     conn = mysql.connect()
     cursor = conn.cursor()
@@ -33,7 +33,7 @@ def return_all():
  
     return jsonify({'rows': rows})
  
-@app.route("/api/books/titles", methods=['GET'])
+@app.route("/api/db_name/Name", methods=['GET'])
 def return_titles():
     titles = []
     for book in books:
