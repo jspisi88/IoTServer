@@ -24,7 +24,7 @@ def return_all():
     conn = mysql.connect
     cursor = conn.cursor()
  
-    cursor.execute("SELECT Name, Author FROM Book")
+    cursor.execute("SELECT * FROM Book")
     rows = cursor.fetchall()
  
     return jsonify({'rows': rows})
