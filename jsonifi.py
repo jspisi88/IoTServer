@@ -13,6 +13,9 @@ app.config['MYSQL_DB'] = 'booksDB'
 app.config['MYSQL_HOST']  ='localhost'
 mysql.init_app(app)
  
+
+books = [{'name': "Snow White", 'author' : "Grimm brothers"},
+        {'name : "Alice's Addventures in Wonderlan", 'author : "Lewis Carrol"}]
  
 
 @app.route("/", methods=['GET'])
@@ -20,7 +23,7 @@ def  hello_world():
     return "hello world"
  
 
-@app.route("blabalb", methods=['GET'])
+@app.route("/api/books", methods=['GET'])
 def return_all():
     conn = mysql.connect()
     cursor = conn.cursor()
@@ -30,7 +33,7 @@ def return_all():
  
     return jsonify({'rows': rows})
  
-@app.route("blabalb", methods=['GET'])
+@app.route("/api/books/titles", methods=['GET'])
 def return_titles():
     titles = []
     for book in books:
