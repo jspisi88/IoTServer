@@ -12,11 +12,7 @@ app.config['MYSQL_PASSWORD'] = 'booksuser123'
 app.config['MYSQL_DB'] = 'booksDB'
 app.config['MYSQL_HOST']  ='localhost'
 mysql.init_app(app)
- 
 
-books = [{'name': "Snow White", 'author' : "Grimm brothers"},
-        {'name : "Alice's Addventures in Wonderlan", 'author : "Lewis Carrol"}]
- 
 
 @app.route("/", methods=['GET'])
 def  hello_world():
@@ -32,14 +28,8 @@ def return_all():
     rows = cursor.fetchall()
  
     return jsonify({'rows': rows})
- 
-@app.route("/api/db_name/Name", methods=['GET'])
-def return_titles():
-    titles = []
-    for book in books:
-        titles.append(book['name'])
- 
-    return jsonify({'titles': titles})
+
  
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
+    
