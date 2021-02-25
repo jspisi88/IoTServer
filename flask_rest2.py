@@ -10,7 +10,7 @@ mysql = MySQL()
 app = Flask(__name__)
 
 # MySQL configurations
-app.config['MYSQL_USER'] ='user'
+app.config['MYSQL_USER'] ='root'
 app.config['MYSQL_PASSWORD'] = 'mysql123'
 app.config['MYSQL_DB'] = 'telemetryDB'
 app.config['MYSQL_HOST'] = 'localhost'
