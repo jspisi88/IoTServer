@@ -2,6 +2,7 @@
 from flask import Flask
 from flask import jsonify
 from flask_mysqldb import MySQL
+from flask import request
  
 mysql = MySQL()
 app  = Flask(__name__)
