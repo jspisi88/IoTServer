@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask, render_template, json, request, redirect, session, jsonify
 from flask import Markup
 from flask_mysqldb import MySQL
